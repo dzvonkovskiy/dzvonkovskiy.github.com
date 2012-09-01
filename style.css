@@ -70,3 +70,24 @@ button {  width: auto; overflow: visible; }
 .mceContentBody {background: white !important;color: #000 !important;}
 .b-ib {display:inline-block;_overflow:hidden;*zoom:1;*display:inline;vertical-align: top;}
 
+
+body{
+    margin: 0 auto;
+    width: 960px;
+}
+.b-header{
+}
+
+.b-nav{
+
+}
+
+.b-content{
+}
+.b-content__header{
+}
+
+.b-footer{
+}
+
+
