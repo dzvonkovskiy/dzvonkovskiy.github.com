@@ -71,68 +71,98 @@ button {  width: auto; overflow: visible; }
 
 .b-ib {display:inline-block;_overflow:hidden;*zoom:1;*display:inline;vertical-align: top;}
 
+
 body{
-    margin: 0 auto;
-    width: 960px;
     background-color: #FFFFFF;
     color: #333333;
-    font-family: sans-serif;
+    font-family: Arial;
     font-size: 14px;
     line-height: 20px;	
 }
+.b-wrap{
+    margin: 0 auto;
+    width: 960px;
+}
+h1{
+    font-size: 36px;
+    line-height: 40px;
+	color: #5A5A5A;
+}
+
 .b-header{
-	position: relative;
-	height: 120px;
-	margin: 20px 0 0;
+    background-color: #111111;
+    color: #FFFFFF;
+    height: 150px;
+    padding: 20px 0;
 }
 .b-header__img{
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 .b-header__title{
-    font-size: 30px;
+    font-size: 60px;
     font-weight: bold;
-    line-height: 24px;
+    line-height: 46px;
+    margin: 0 53px;
     text-align: right;
+	text-shadow: -1px -1px 6px #EEEEEE;
 }
 .b-header__title span{
-    color: #AAAAAA;
+    color: #777777;
     display: block;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 30px;
+    text-shadow: -1px -1px 2px #B4B4B4;
+}
+.b-header__contacts{
+    color: #979797;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 2px;
+	margin-right: -20px;
+    text-shadow: -1px -1px 2px #AAAAAA;	
+}
+
+.b-body{
+	
 }
 
 .b-nav{
-    border-bottom: 1px solid #000000;
     list-style-type: none;
-    margin-bottom: 30px;
-    margin-top: -23px;
-    padding-left: 145px;
 }
 .b-nav__item{
-	background-color: #fff;
-	padding: 1px 17px;
 	display:inline-block;
 	_overflow:hidden;
 	*zoom:1;
 	*display:inline;
 }
 .b-nav__item_curr{
-    border-right: 1px solid #000000;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
-    border-radius: 7px 7px 0 0;
-    margin-bottom: -1px;
-    padding-bottom: 2px;
 }
 
 .b-content{
 }
+
 .b-content__header{
 }
 
 .b-footer{
+    background-color: #111111;
+    color: #FFFFFF;
+	height: 60px;
+	padding: 10px 0;
+}
+.b-footer__img{
+}
+.b-footer__title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: right;
+}
+.b-footer__title span{
+    color: #AAAAAA;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.b-footer__contacts{
 }
 
 
