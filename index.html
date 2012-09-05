@@ -13,11 +13,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="style.css" />
-
+	<link rel="stylesheet" type="text/css" href="bootstarp/css/bootstrap.min.css" />
 	<script src="js/modernizr.js"></script>
 	<script src="js/jquery.js"></script>
+	<script src="bootstarp/js/bootstrap.min.js"></script>
+	
+	<!--
 	<link rel="stylesheet" type="text/css" href="js/highslide.css" />  
-	<script src="js/highslide.js"></script>
+	<script src="js/highslide.js"></script>	
 	<script type="text/javascript">
 		hs.graphicsDir = '/js/hs-graphics/';
 		hs.outlineType = 'rounded-white';
@@ -29,6 +32,15 @@
 		hs.creditsTitle = 'Перейти на главную страницу';
 		hs.restoreTitle = 'Щелкните по картинке чтобы закрыть ее, перетащите для перемещения.';
 		hs.creditsHref = '/';
+	</script>
+	-->	
+	<script>
+
+	$(document).ready(function(){
+		//$('#nav').affix(offset={y:122});
+		$('.b-nav').scrollspy();
+	});
+
 	</script>
 </head>
 
@@ -42,12 +54,12 @@
 			<li class="b-contacts__item">8&nbsp;(000)&nbsp;123-45-67</li>
 		</ul>
 	</div></div>		
-	<div class="b-nav"><div class="b-wrap">
+	<div class="b-nav" data-spy="affix" data-offset-top="122"><div class="b-wrap">
 		<div class="b-nav__line"></div><a class="b-nav__item" href="#common">Общие вопросы
 		</a><div class="b-nav__line"></div><a class="b-nav__item" href="#experience">Опыт разработки
 		</a><div class="b-nav__line"></div><a class="b-nav__item b-nav__item_last" href="#tasks">Технические задания</a><div class="b-nav__line b-nav__line_last"></div>
 	</div></div>	
-	<div class="b-content"><div class="b-wrap">
+	<div class="b-content" data-spy="scroll" data-target=".b-nav"><div class="b-wrap">
 		<h1 class="b-content__header" id="common">Общие вопросы</h2>
 		<dl>
 			<dt>Фамилия, имя, отчество</dt>
