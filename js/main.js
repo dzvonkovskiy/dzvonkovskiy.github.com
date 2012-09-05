@@ -1,51 +1,27 @@
-var links;
-
-function scrollTo(href){
-  link = $("" + href.substring(1, href.length) + "]");
-  $(window).scrollTop(link.offset().top);
-};
-
 function updateNav(){
-	var y = $(window).scrollTop();
-	var last_name;
-
-	links.each(function() {
-	var name = $(this).attr("name");
-	$("a[href$=" + name + "]").parent().removeClass("b-nav__item_state_active");
-
-	var link_y = $(this).position()["top"];
-	if (y >= link_y) {
-		last_name = name;
-	}
+	var window_y = $(window).scrollTop();
+	var	nav_links = $(".b-nav__item");
+	var last_id = '';
+	
+	nav_links.each(function(){
+		var id = $(this).attr("href");
+		var link_y = $(id).offset().top;
+		if (window_y >= link_y){
+			last_id = id;
+		}
 	});
 
-	if (last_name == null) {
-		$("a[href$=" + links.first().attr("name") + "]").parent().addClass("b-nav__item_state_active");
-	}else{
-		$("a[href$=" + last_name + "]").parent().addClass("b-nav__item_state_active");
+	var active_item = $(".b-nav__item_curr");
+
+	if (last_id != '' && last_id != active_item.attr("href")){
+		active_item.removeClass("b-nav__item_curr");
+		$('a[href="'+last_id+'"]').addClass("b-nav__item_curr");
 	}
-};
+}
 
 $(document).ready(function() {
 	$(window).scroll(function(){
-		var y = $(window).scrollTop();
-		nav_links = $(".b-nav__item");	
-		var last_name;
-		nav_links.each(function() {
-			var name = $(this).attr("href");
-			$("a[href$=" + name + "]").parent().removeClass("b-nav__item_state_active");
-
-			var link_y = $(this).position()["top"];
-			if (y >= link_y) {
-				last_name = name;
-		}
-		});
-
-		if (last_name == null) {
-			$("a[href$=" + nav_links.first().attr("name") + "]").parent().addClass("b-nav__item_curr");
-		}else{
-			$("a[href$=" + last_name + "]").parent().addClass("b-nav__item_curr");
-		}		
-
+		updateNav();
 	});
 });
+

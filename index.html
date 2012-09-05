@@ -17,6 +17,7 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="bootstarp/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 	
 	<!--
 	<link rel="stylesheet" type="text/css" href="js/highslide.css" />  
@@ -35,12 +36,10 @@
 	</script>
 	-->	
 	<script>
-
-	$(document).ready(function(){
-		//$('#nav').affix(offset={y:122});
-		$('.b-nav').scrollspy();
-	});
-
+		$(document).ready(function(){
+			$('#nav').affix(offset={y:122});
+			//$('.b-nav').scrollspy();
+		});
 	</script>
 </head>
 
@@ -60,7 +59,8 @@
 		</a><div class="b-nav__line"></div><a class="b-nav__item b-nav__item_last" href="#tasks">Технические задания</a><div class="b-nav__line b-nav__line_last"></div>
 	</div></div>	
 	<div class="b-content" data-spy="scroll" data-target=".b-nav"><div class="b-wrap">
-		<h1 class="b-content__header" id="common">Общие вопросы</h2>
+		<a class="b-anchor" id="common"></a>
+		<h1 class="b-content__header">Общие вопросы</h2>
 		<dl>
 			<dt>Фамилия, имя, отчество</dt>
 			<dd>Дзвонковский Илья Ивгеньевич</dd>
@@ -85,7 +85,8 @@
 			<dt>Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</dt>
 			<dd>Стажировке - дня 2 в неделю, работе - 5 в неделю по 8 часов. Ну и свободное от работы время - по мере сил и возможностей</dd>
 		</dl>
-		<h1 class="b-content__header" id="experience">Опыт разработки</h2>
+		<a class="b-anchor" id="experience"></a>
+		<h1 class="b-content__header">Опыт разработки</h2>
 		<dl>
 			<dt>Расскажите нам о вашем опыте разработки. Ничего не упускайте: это может быть как серьезный интерфейс, так и просто домашняя страничка.</dt>
 			<dd>Первый "серьезный" опыт разработки - написание драйвера для купюроприемников CacheCode (писал на Delphi). Дальше и по сей день - вэбпрограммирование на PHP/JavaScript и верстка. В данной сфере мой опыт пока нельзя назвать "серъезным". Вот неполный список сделанного мной:
@@ -118,7 +119,8 @@
 			<dt>Работали ли вы где-нибудь? Какие у вас были должностные обязанности? Есть ли опыт работы в команде?</dt>
 			<dd>После окончания ВУЗа работал сисадмином в этом же ВУЗе (обеспечение работоспособности серверов, сети, обслуживание рабочих станций, иснтруктаж студентов), параллельно работал сисадмином и учителем информатики в соседней	школе. Недавно предоставилась возможность рабовать в качестве вэб-программиста и верстальщика. Активно обучаюсь. Опыт работы в команде есть: в ВУЗе - в педагогическом коллективе, в школе - в учительском коллективе, в данный момент - в коллективе других верстальщиков и программистов.</dd>
 		</dl>
-		<h1 class="b-content__header" id="tasks">Технические задания</h2>
+		<a class="b-anchor" id="tasks"></a>
+		<h1 class="b-content__header">Технические задания</h2>
 		<dl>
 		</dl>
 	</div></div>	
